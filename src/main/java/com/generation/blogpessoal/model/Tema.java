@@ -28,6 +28,8 @@ public class Tema {
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
 
+	/* Inserir os Getters and Setters */
+	
 	public Long getId() {
 		return id;
 	}
