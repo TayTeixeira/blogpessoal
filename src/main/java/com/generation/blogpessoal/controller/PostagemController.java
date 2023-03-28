@@ -44,7 +44,7 @@ public class PostagemController {
 	public ResponseEntity<Postagem> getById(@PathVariable Long id) {
 		return postagemRepository.findById(id).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
-	}
+	}	
 
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) {
@@ -57,7 +57,7 @@ public class PostagemController {
 
 			if (temaRepository.existsById(postagem.getTema().getId()))
 				return ResponseEntity.status(HttpStatus.CREATED).body(postagemRepository.save(postagem));
-
+			
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
 		}
 

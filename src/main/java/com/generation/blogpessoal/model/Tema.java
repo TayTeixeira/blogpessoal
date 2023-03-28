@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "tb_temass")
+@Table(name = "tb_temas")
 public class Tema {
 
 	@Id
